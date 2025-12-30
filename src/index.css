@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,8 +15,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 263 70% 70%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --orange: 24 95% 53%;
+    --dark: 222 47% 11%;
+    --purple: 263 70% 50%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -61,8 +67,12 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 263 70% 70%;
     --primary-foreground: 222.2 47.4% 11.2%;
+
+    --orange: 24 95% 53%;
+    --dark: 222 47% 11%;
+    --purple: 263 70% 50%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -97,5 +107,49 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family:
+      "Rubik",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      "Montserrat",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-dark {
+    background-color: hsl(var(--dark));
+  }
+  .text-orange {
+    color: hsl(var(--orange));
+  }
+  .bg-orange {
+    background-color: hsl(var(--orange));
+  }
+  .border-orange {
+    border-color: hsl(var(--orange));
+  }
+  .from-orange {
+    --tw-gradient-from: hsl(var(--orange)) var(--tw-gradient-from-position);
+    --tw-gradient-to: hsl(var(--orange) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .to-orange {
+    --tw-gradient-to: hsl(var(--orange)) var(--tw-gradient-to-position);
   }
 }
